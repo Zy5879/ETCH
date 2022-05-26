@@ -1,13 +1,34 @@
-const container = document.getElementById('container');
+const container = document.getElementById("container");
 
-function makeRows (rows, cols) {
-    div1.style.setProperty('--grid-rows', rows);
-    div1.style.setProperty('--grid-cols', cols);
-    for (c = 0; c < (rows * cols); c++) {
-        let cell = document.createElement('div');
-        cell.innerText = (c + 1);
-        container.appendChild(cell).className = 'grid-item'
-    };
+function makeRows(rows, cols) {
+  container.style.setProperty('--grid-rows', rows);
+  container.style.setProperty('--grid-cols', cols);
+  for (i = 0; i < (rows * cols); i++) {
+    let sqaure = document.createElement("div");
+    container.appendChild(sqaure).className = "grid-item";
+  };
+  //hoverColor()
 };
+
+
+/*function randomColor() {
+    let letters = '123456789ABCDEF';
+    let colors = '#'
+    for(let i = 0; i < 6; i++) {
+        colors += letters[Math.floor(Math.random() * 16)];
+    }
+    return colors;
+}
+*/
+
+/*function hoverColor() {
+    let items = document.querySelectorAll('.grid-item');
+    items.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = `${randomColor()}`;
+        });
+    });
+}
+*/
 
 makeRows(16,16);
