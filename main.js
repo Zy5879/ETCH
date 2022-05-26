@@ -19,6 +19,15 @@ function randomColor() {
     return colors;
 }
 
+function hoverCells() {
+    let items = document.querySelectorAll('.grid-items')
+    items.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = `${randomColor()}`;
+        });
+    });
+};
+
 /*function randomColor() {
     let letters = '123456789ABCDEF';
     let colors = '#'
