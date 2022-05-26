@@ -10,6 +10,14 @@ function makeRows(rows, cols) {
   //hoverColor()
 };
 
+function randomColor() {
+    let letters = '123456789ABCDEF';
+    let colors = '#';
+    for(let i = 0; i < 6; i++) {
+        colors += letters[Math.floor(Math.random() * 16)];
+    }
+    return colors;
+}
 
 /*function randomColor() {
     let letters = '123456789ABCDEF';
